@@ -2,6 +2,7 @@
   "name": "project-thuvien",
   "version": "0.1.0",
   "private": true,
+  "homepage": " https://minhkhanh693.github.io/ProjectThuVien",
   "dependencies": {
     "@react-pdf-viewer/core": "^3.3.2",
     "@react-pdf-viewer/default-layout": "^3.3.2",
@@ -10,6 +11,7 @@
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^14.2.0",
     "antd": "^4.20.4",
+    "gh-pages": "^4.0.0",
     "install": "^0.13.0",
     "npm": "^8.10.0",
     "pdfjs-dist": "2.13.216",
@@ -17,11 +19,13 @@
     "react-dom": "17.0.2",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.18"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
