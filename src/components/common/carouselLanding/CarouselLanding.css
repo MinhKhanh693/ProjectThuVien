@@ -1,0 +1,20 @@
+.ant-carousel .slick-next::before {
+  content: "" !important;
+}
+.ant-carousel .slick-prev::before {
+  content: "" !important;
+}
+.CarouselLanding {
+  position: relative;
+}
+.CarouselLanding-content {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+.CarouselLanding-content_btn {
+  color: white;
+  background: #2d2d7a;
+  margin-left: 25%;
+  margin-top: 5%;
+}

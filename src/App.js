@@ -1,57 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { Fragment, useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { Footer } from "./components/common/footer/Footer";
+import { Headers } from "./components/common/headers";
+import { CategoryPageLayout } from "./features/categoryPage";
+import { DetailPageLayout } from "./features/detailPage";
+import { HomePageLayout } from "./features/homePage";
+import { ViewOnlineProductLayout } from "./features/viewOnlineProduct";
 
 function App() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    // scroll to top
+    window.scrollTo(0, 0);
+  }, [navigate]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Fragment>
+      <Headers />
+      <Routes>
+        <Route path="/" element={<HomePageLayout />} />
+        <Route path="/detail-page/:id" element={<DetailPageLayout />} />
+        <Route path="/category-page" element={<CategoryPageLayout />} />
+        <Route path="/view-online/:id" element={<ViewOnlineProductLayout />} />
+      </Routes>
+      <Footer />
+    </Fragment>
   );
 }
 

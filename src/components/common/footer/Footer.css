@@ -1,0 +1,10 @@
+.footer{
+    margin-top: 40px;
+}
+.footer-title{
+    font-weight: bold;
+    color: red !important;
+    text-transform: uppercase;
+
+    transform: translate(10px,10px);
+}
