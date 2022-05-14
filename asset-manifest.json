@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ProjectThuVien/static/css/main.3e3ea6ca.css",
+    "main.js": "/ProjectThuVien/static/js/main.90dca72f.js",
+    "static/js/787.63db691c.chunk.js": "/ProjectThuVien/static/js/787.63db691c.chunk.js",
+    "static/media/LAYOUT-FULL.pdf": "/ProjectThuVien/static/media/LAYOUT-FULL.4d9065a6101f1aba5b03.pdf",
+    "static/media/logo-daiphatdat.png": "/ProjectThuVien/static/media/logo-daiphatdat.56b339b185e0b5b4e1d7.png",
+    "index.html": "/ProjectThuVien/index.html",
+    "main.3e3ea6ca.css.map": "/ProjectThuVien/static/css/main.3e3ea6ca.css.map",
+    "main.90dca72f.js.map": "/ProjectThuVien/static/js/main.90dca72f.js.map",
+    "787.63db691c.chunk.js.map": "/ProjectThuVien/static/js/787.63db691c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e3ea6ca.css",
+    "static/js/main.90dca72f.js"
+  ]
+}
