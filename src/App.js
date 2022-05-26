@@ -18,9 +18,9 @@ function App() {
       <Headers />
       <Routes>
         <Route path="/ProjectThuVien" element={<HomePageLayout />} />
-        <Route path="/detail-page/:id" element={<DetailPageLayout />} />
-        <Route path="/category-page" element={<CategoryPageLayout />} />
-        <Route path="/view-online/:id" element={<ViewOnlineProductLayout />} />
+        <Route path="/ProjectThuVien/detail-page/:id" element={<DetailPageLayout />} />
+        <Route path="/ProjectThuVien/category-page" element={<CategoryPageLayout />} />
+        <Route path="/ProjectThuVien/view-online/:id" element={<ViewOnlineProductLayout />} />
       </Routes>
       <Footer />
     </Fragment>

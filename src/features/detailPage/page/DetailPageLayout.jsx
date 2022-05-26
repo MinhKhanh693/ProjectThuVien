@@ -21,7 +21,7 @@ export function DetailPageLayout() {
       <div className="detailPage Container" style={{ marginTop: 30 }}>
         <Divider
           plain
-          style={{ fontSize: 30, fontWeight: "bold", marginBottom: 30 }}
+          style={{ fontSize: 30, fontWeight: "bold", marginBottom: 30 , borderTopColor:'black'}}
         >
           Chi tiết sản phẩm
         </Divider>
@@ -94,7 +94,7 @@ function DetailInfo({ textBold, text }) {
             marginTop: 20,
           }}
           onClick={() => {
-            navigate("/view-online/1");
+            navigate("/ProjectThuVien/view-online/1");
           }}
         >
           Đọc sách online

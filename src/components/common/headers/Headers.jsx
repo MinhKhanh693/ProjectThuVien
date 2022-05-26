@@ -45,7 +45,7 @@ export function Headers() {
           icon: <WalletOutlined />,
           style: { padding: 10 },
           onClick: () => {
-            navigate("/category-page");
+            navigate("/ProjectThuVien/category-page");
           },
         },
         {
@@ -54,7 +54,7 @@ export function Headers() {
           icon: <WalletOutlined />,
           style: { padding: 10 },
           onClick: () => {
-            navigate("/category-page");
+            navigate("/ProjectThuVien/category-page");
           },
         },
         {
@@ -63,7 +63,7 @@ export function Headers() {
           icon: <WalletOutlined />,
           style: { padding: 10 },
           onClick: () => {
-            navigate("/category-page");
+            navigate("/ProjectThuVien/category-page");
           },
         },
       ]}

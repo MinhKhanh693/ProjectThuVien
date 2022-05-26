@@ -12,7 +12,7 @@ export function ProductCard() {
       cover={
         <img
           onClick={() => {
-            navigate("/detail-page/1", { state: { id: 1 } });
+            navigate("/ProjectThuVien/detail-page/1", { state: { id: 1 } });
           }}
           alt="book"
           src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
@@ -22,7 +22,7 @@ export function ProductCard() {
         <Button
           style={{ color: "white", background: "red" }}
           onClick={() => {
-            navigate("/view-online/1");
+            navigate("/ProjectThuVien/view-online/1");
           }}
         >
           Đọc sách online

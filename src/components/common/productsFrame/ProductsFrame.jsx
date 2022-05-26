@@ -7,7 +7,7 @@ export function ProductsFrame(props) {
   const Arr = [10, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   return (
     <div className="ProductsFrame">
-      <Divider plain className="ProductsFrame-title">
+      <Divider plain className="ProductsFrame-title" style={{borderTopColor:'black'}}>
         {props.title}
       </Divider>
 
