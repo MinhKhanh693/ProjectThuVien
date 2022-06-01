@@ -15,6 +15,9 @@
     "install": "^0.13.0",
     "npm": "^8.10.0",
     "pdfjs-dist": "2.13.216",
+    "rc-banner-anim": "^2.4.5",
+    "rc-queue-anim": "^2.0.0",
+    "rc-scroll-anim": "^2.7.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "^8.0.1",
@@ -24,7 +27,7 @@
     "yarn": "^1.22.18"
   },
   "scripts": {
-    "clean" : "gh-pages-clean",
+    "clean": "gh-pages-clean",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",

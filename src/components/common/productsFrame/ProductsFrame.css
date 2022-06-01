@@ -1,19 +1,20 @@
 .ProductsFrame {
   margin-top: 30px;
+  height: calc(250px * 3 + 90px);
 }
 .ProductsFrame-title {
   text-align: center;
   text-transform: uppercase;
 }
-.ProductsFrame-more{
+.ProductsFrame-more {
   text-align: center;
   margin-top: 30px;
 }
-.ProductsFrame-more button{
+.ProductsFrame-more button {
   text-transform: uppercase;
   background: #2d2d7a;
   color: white;
 }
-.ProductsFram-more_pagination{
+.ProductsFram-more_pagination {
   margin-top: 40px;
 }
