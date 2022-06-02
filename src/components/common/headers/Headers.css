@@ -1,29 +1,28 @@
 .header-under {
-  background: #ff0000;
+  background: #df1f26;
 }
 .header-above_auth__item {
   float: right;
   color: #000000;
 }
-.sticky{
+.sticky {
   position: fixed;
   top: -45px;
   z-index: 999;
   width: 100%;
   background-color: white;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
-.ProductsFrame-title{
+.ProductsFrame-title {
   font-size: 30px !important;
   font-weight: bold !important;
 }
-
 
 /* over ride andt */
 .header-under .ant-menu-item::after {
   bottom: 7px !important;
 }
-.header-under .ant-menu-horizontal{
+.header-under .ant-menu-horizontal {
   border-bottom: none !important;
 }
 .header-under .ant-menu-item-selected {

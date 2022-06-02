@@ -1,0 +1,29 @@
+.LoginLayout {
+  height: 549px;
+}
+
+.LoginLayout-box {
+  width: 40%;
+  height: 95%;
+  padding: 60px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.LoginLayout-box .login-form {
+  max-width: 100%;
+}
+.LoginLayout-box .login-form-forgot {
+  float: right;
+}
+.LoginLayout-box .ant-col-rtl .login-form-forgot {
+  float: left;
+}
+.LoginLayout-box .login-form-button {
+  width: 100%;
+}

@@ -10,29 +10,36 @@ export function ProductsFrame(props) {
   const Arr = [10, 1, 1, 1, 1, 1, 1, 1, 1, 1];
   return (
     <div className="ProductsFrame">
-      <Divider
-        plain
-        className="ProductsFrame-title"
-        style={{ borderTopColor: "black" }}
-      >
-        {props.title}
-      </Divider>
       <OverPack hideProps={{ tweenOne: { reverse: true } }}>
         <QueueAnim
           key="queue"
-          leaveReverse
-          style={{
-            marginLeft: -230,
-          }}
+          // leaveReverse
+          delay={200}
+          style={{ transform: "translateY(20px)" }}
         >
+          <TweenOne
+            animation={{
+              translateY: -20,
+              opacity: 1,
+            }}
+            style={{ opacity: 0 }}
+          >
+            <Divider
+              plain
+              className="ProductsFrame-title"
+              style={{ borderTopColor: "black", marginBottom: 30 }}
+            >
+              {props.title}
+            </Divider>
+          </TweenOne>
           <Row className="ProductsFrame-product_box" gutter={[50, 30]}>
             {Arr.map((item, index) => (
               <TweenOne
                 key={index}
                 animation={{
-                  x: 230,
+                  translateY: -20,
                   opacity: 1,
-                  delay: index * 100,
+                  delay: 100,
                 }}
                 style={{ opacity: 0 }}
               >

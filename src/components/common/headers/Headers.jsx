@@ -1,4 +1,8 @@
-import { DownOutlined, MenuOutlined, WalletOutlined } from "@ant-design/icons";
+import {
+  CaretDownOutlined,
+  MenuOutlined,
+  WalletOutlined,
+} from "@ant-design/icons";
 import {
   Button,
   Col,
@@ -102,8 +106,8 @@ function HeaderAbove({ logoDpd, scroll }) {
               </Typography.Title>
             ) : (
               <Image
-                width={150}
-                height={100}
+                width={111}
+                height={80}
                 src={logoDpd}
                 alt="logo"
                 preview={false}
@@ -117,7 +121,7 @@ function HeaderAbove({ logoDpd, scroll }) {
             size={scroll ? "large" : "middle"}
             style={{
               width: "100%",
-              marginTop: scroll ? "60px" : "20px",
+              marginTop: scroll ? "60px" : "8px",
               justifyContent: scroll ? "center" : "",
             }}
           >
@@ -134,7 +138,7 @@ function HeaderAbove({ logoDpd, scroll }) {
               >
                 |
               </span>
-              <Link to="/login" className="header-above_auth__item">
+              <Link to="/Register" className="header-above_auth__item">
                 Đăng ký
               </Link>
             </div>
@@ -171,7 +175,7 @@ function HeaderUnder({ menu, iconStyle }) {
             <Button
               style={{
                 color: "white",
-                background: "red",
+                background: "#df1f26",
                 border: "1px solid white",
                 padding: "0 21px 41px 21px",
               }}
@@ -183,7 +187,7 @@ function HeaderUnder({ menu, iconStyle }) {
               >
                 <MenuOutlined style={iconStyle} />
                 Danh mục sách
-                <DownOutlined style={iconStyle} />
+                <CaretDownOutlined style={iconStyle} />
               </Space>
             </Button>
           </Dropdown>
@@ -193,7 +197,7 @@ function HeaderUnder({ menu, iconStyle }) {
             mode="horizontal"
             style={{
               color: "white",
-              background: "red",
+              background: "#df1f26",
               justifyContent: "flex-end",
               alignItems: "flex-start",
               width: "100%",

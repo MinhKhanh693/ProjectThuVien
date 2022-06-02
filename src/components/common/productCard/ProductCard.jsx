@@ -20,7 +20,7 @@ export function ProductCard() {
       }
       actions={[
         <Button
-          style={{ color: "white", background: "red" }}
+          style={{ color: "white", background: "#df1f26" }}
           onClick={() => {
             navigate("/ProjectThuVien/view-online/1");
           }}

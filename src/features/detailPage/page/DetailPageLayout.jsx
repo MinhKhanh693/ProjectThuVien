@@ -90,7 +90,7 @@ function DetailInfo({ textBold, text }) {
           size="large"
           style={{
             color: "white",
-            background: "red",
+            background: "#df1f26",
             marginTop: 20,
           }}
           onClick={() => {
