@@ -3,10 +3,13 @@ import "@react-pdf-viewer/core/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 // import workerUrl from '@pdfjs-dist/build/pdf.worker.js';
-import React from "react";
+import React, { useEffect } from "react";
 import file from "./../../../asset/Files/LAYOUT-FULL.pdf";
 
 export function ViewOnlineProductLayout() {
+  useEffect(() => {
+    document.title = "xem trực tuyến";
+  }, []);
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   return (
     <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.13.216/build/pdf.worker.min.js">

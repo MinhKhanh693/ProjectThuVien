@@ -1,12 +1,15 @@
 import { Image } from "antd";
 import { OverPack } from "rc-scroll-anim";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { CarouselLanding } from "../../../components/common/carouselLanding";
 import { ProductsFrame } from "../../../components/common/productsFrame";
 import TweenOne from "rc-tween-one";
 import QueueAnim from "rc-queue-anim";
 
 export function HomePageLayout() {
+  useEffect(() => {
+    document.title = "Trang chủ";
+  }, []);
   return (
     <Fragment>
       <CarouselLanding />

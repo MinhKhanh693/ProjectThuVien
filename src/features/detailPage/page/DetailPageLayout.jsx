@@ -8,20 +8,28 @@ import {
   Space,
   Typography,
 } from "antd";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { CarouselLanding } from "../../../components/common/carouselLanding";
 import { ProductsFrame } from "../../../components/common/productsFrame";
 const textBold = { fontWeight: "900", fontSize: "18px" };
 const text = { fontWeight: "100", fontSize: "18px" };
 export function DetailPageLayout() {
+  useEffect(() => {
+    document.title = "Chi tiết sản phẩm";
+  }, []);
   return (
     <Fragment>
       <CarouselLanding />
       <div className="detailPage Container" style={{ marginTop: 30 }}>
         <Divider
           plain
-          style={{ fontSize: 30, fontWeight: "bold", marginBottom: 30 , borderTopColor:'black'}}
+          style={{
+            fontSize: 30,
+            fontWeight: "bold",
+            marginBottom: 30,
+            borderTopColor: "black",
+          }}
         >
           Chi tiết sản phẩm
         </Divider>
