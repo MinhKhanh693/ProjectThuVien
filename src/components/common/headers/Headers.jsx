@@ -42,12 +42,13 @@ export function Headers() {
 
   const menu = (
     <Menu
+      style={{ border: "1px solid #ccc" }}
       items={[
         {
           label: "SÁCH THAM KHẢO",
           key: "1",
           icon: <WalletOutlined />,
-          style: { padding: 10 },
+          style: { padding: 10, border: "1px solid #ccc", margin: 10 },
           onClick: () => {
             navigate("/ProjectThuVien/category-page");
           },
@@ -56,7 +57,7 @@ export function Headers() {
           label: "SÁCH THAM KHẢO",
           key: "2",
           icon: <WalletOutlined />,
-          style: { padding: 10 },
+          style: { padding: 10, border: "1px solid #ccc", margin: 10 },
           onClick: () => {
             navigate("/ProjectThuVien/category-page");
           },
@@ -65,7 +66,7 @@ export function Headers() {
           label: "SÁCH THAM KHẢO",
           key: "3",
           icon: <WalletOutlined />,
-          style: { padding: 10 },
+          style: { padding: 10, border: "1px solid #ccc", margin: 10 },
           onClick: () => {
             navigate("/ProjectThuVien/category-page");
           },
@@ -171,8 +172,9 @@ function HeaderUnder({ menu, iconStyle }) {
             alignItems: "center",
           }}
         >
-          <Dropdown overlay={menu}>
+          <Dropdown overlay={menu} trigger={["click"]}>
             <Button
+              onClick={(e) => e.preventDefault()}
               style={{
                 color: "white",
                 background: "#df1f26",

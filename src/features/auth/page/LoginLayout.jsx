@@ -5,18 +5,24 @@ import {
   FacebookOutlined,
   GooglePlusOutlined,
 } from "@ant-design/icons";
-import React from "react";
+import React, { useState } from "react";
 import "./LoginLayout.css";
 import { Link } from "react-router-dom";
 
 export function LoginLayout() {
+  const [result, setResult] = useState(null);
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+    const res = "error"; //<--- change this to see different result
+    if (res === "success") {
+      setResult({ result: "success" });
+    } else {
+      setResult({ result: "error" });
+    }
   };
   return (
     <div className="LoginLayout Container">
       <div className="LoginLayout-box">
-        <Space direction="vertical" style={{marginBottom:30}}>
+        <Space direction="vertical" style={{ marginBottom: 30 }}>
           <Typography.Text style={{ fontSize: 22, fontWeight: 900 }}>
             Đăng nhập
           </Typography.Text>
@@ -33,6 +39,14 @@ export function LoginLayout() {
           onFinish={onFinish}
         >
           <Form.Item
+            hasFeedback
+            validateStatus={
+              result
+                ? result.result === "success"
+                  ? "success"
+                  : "warning"
+                : undefined
+            }
             name="username"
             rules={[
               {
@@ -42,16 +56,29 @@ export function LoginLayout() {
             ]}
           >
             <Input
+              allowClear
               prefix={<UserOutlined className="site-form-item-icon" />}
               placeholder="Tên đăng nhập"
             />
           </Form.Item>
           <Form.Item
             name="password"
+            hasFeedback
+            validateStatus={
+              result
+                ? result.result === "success"
+                  ? "success"
+                  : "warning"
+                : undefined
+            }
             rules={[
               {
                 required: true,
                 message: "Vui lòng nhập mật khẩu!",
+              },
+              {
+                pattern: /.{8,}/,
+                message: "Mât khẩu phải có ít nhất 8 ký tự!",
               },
             ]}
           >
@@ -59,6 +86,7 @@ export function LoginLayout() {
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
               placeholder="Mật khẩu"
+              allowClear
             />
           </Form.Item>
           <Form.Item>

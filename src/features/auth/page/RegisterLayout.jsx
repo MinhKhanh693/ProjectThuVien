@@ -1,11 +1,18 @@
 import { Button, Checkbox, Form, Input, Space, Typography } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./RegisterLayout.css";
 
 export function RegisterLayout() {
+  const [result, setResult] = useState(null);
+
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+    const res = "error"; //<--- change this to see different result
+    if (res === "success") {
+      setResult({ result: "success" });
+    } else {
+      setResult({ result: "error" });
+    }
   };
   return (
     <div className="RegisterLayout Container">
@@ -29,6 +36,14 @@ export function RegisterLayout() {
           <Form.Item
             label="Họ và tên"
             name="fullname"
+            hasFeedback
+            validateStatus={
+              result
+                ? result.result === "success"
+                  ? "success"
+                  : "warning"
+                : undefined
+            }
             tooltip="Bạn muốn người khác gọi bạn là gì?"
             rules={[
               {
@@ -38,11 +53,19 @@ export function RegisterLayout() {
               },
             ]}
           >
-            <Input />
+            <Input allowClear />
           </Form.Item>
           <Form.Item
             label="Tên đăng nhập"
             name="username"
+            hasFeedback
+            validateStatus={
+              result
+                ? result.result === "success"
+                  ? "success"
+                  : "warning"
+                : undefined
+            }
             rules={[
               {
                 required: true,
@@ -50,23 +73,43 @@ export function RegisterLayout() {
               },
             ]}
           >
-            <Input />
+            <Input allowClear />
           </Form.Item>
           <Form.Item
             name="password"
             label="Mật khẩu"
+            hasFeedback
+            validateStatus={
+              result
+                ? result.result === "success"
+                  ? "success"
+                  : "warning"
+                : undefined
+            }
             rules={[
               {
                 required: true,
                 message: "Vui lòng nhập mật khẩu!",
               },
+              {
+                pattern: /.{8,}/,
+                message: "Mât khẩu phải có ít nhất 8 ký tự!",
+              },
             ]}
           >
-            <Input.Password type="password" />
+            <Input.Password type="password" allowClear />
           </Form.Item>
           <Form.Item
             name="confirmPassword"
             label="Xác nhận mật khẩu"
+            hasFeedback
+            validateStatus={
+              result
+                ? result.result === "success"
+                  ? "success"
+                  : "warning"
+                : undefined
+            }
             rules={[
               {
                 required: true,
@@ -74,11 +117,19 @@ export function RegisterLayout() {
               },
             ]}
           >
-            <Input.Password type="confirmPassword" />
+            <Input.Password type="confirmPassword" allowClear />
           </Form.Item>
           <Form.Item
             name="email"
             label="E-mail"
+            hasFeedback
+            validateStatus={
+              result
+                ? result.result === "success"
+                  ? "success"
+                  : "warning"
+                : undefined
+            }
             rules={[
               {
                 type: "email",
@@ -90,7 +141,7 @@ export function RegisterLayout() {
               },
             ]}
           >
-            <Input type="email" />
+            <Input type="email" allowClear />
           </Form.Item>
           <Form.Item
             name="agreement"

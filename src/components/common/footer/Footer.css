@@ -1,10 +1,10 @@
-.footer{
-    margin-top: 40px;
+.footer {
+  margin-top: 40px;
 }
-.footer-title{
-    font-weight: bold;
-    color: #df1f26 !important;
-    text-transform: uppercase;
+.footer-title {
+  font-weight: bold;
+  color: #df1f26 !important;
+  text-transform: uppercase;
 
-    transform: translate(10px,10px);
+  transform: translate(10px, 10px);
 }
