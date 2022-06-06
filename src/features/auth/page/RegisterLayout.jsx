@@ -1,11 +1,15 @@
 import { Button, Checkbox, Form, Input, Space, Typography } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./RegisterLayout.css";
 
 export function RegisterLayout() {
   const [result, setResult] = useState(null);
 
+  useEffect(() => {
+    document.title = "Đăng ký";
+  }, []);
+  
   const onFinish = (values) => {
     const res = "error"; //<--- change this to see different result
     if (res === "success") {

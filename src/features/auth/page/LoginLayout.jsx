@@ -5,12 +5,17 @@ import {
   FacebookOutlined,
   GooglePlusOutlined,
 } from "@ant-design/icons";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./LoginLayout.css";
 import { Link } from "react-router-dom";
 
 export function LoginLayout() {
   const [result, setResult] = useState(null);
+
+  useEffect(() => {
+   document.title = "Đăng nhập"
+  }, []);
+
   const onFinish = (values) => {
     const res = "error"; //<--- change this to see different result
     if (res === "success") {
