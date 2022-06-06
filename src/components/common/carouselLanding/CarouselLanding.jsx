@@ -36,11 +36,11 @@ function CarouselLandingImage() {
     },
   ];
   return (
-    <BannerAnim style={{ height: 500 }} autoPlay>
+    <BannerAnim style={{ height: 550}} autoPlaySpeed={3000} autoPlay>
       {listImage.map((item, index) => (
         <Element
           key={item.key}
-          style={{ height: 500 }}
+          style={{ height: 550 }}
           followParallax={{
             delay: 1000,
             data: [
@@ -61,6 +61,7 @@ function CarouselLandingImage() {
               backgroundImage: `url(${item.src})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
+              objectFit: "cover",
               width: "100%",
               height: "100%",
             }}
